@@ -1,0 +1,15 @@
+{
+  "name": "pruebas-finales",
+  "version": "1.0.0",
+  "description": "Proyecto de ejemplo para generar Pull Requests reales y validar FlowMetric.",
+  "main": "src/index.js",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
