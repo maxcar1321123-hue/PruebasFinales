@@ -28,7 +28,8 @@ function applyDiscount(price, percent) {
   if (percent < 0 || percent > 100) {
     throw new RangeError('El descuento debe estar entre 0 y 100');
   }
-  return price - (price * percent) / 100;
+  // Fallo controlado para PR de prueba: resta el porcentaje como importe fijo.
+  return Math.max(price - percent, 0);
 }
 
 module.exports = { add, subtract, multiply, divide, average, applyDiscount };
