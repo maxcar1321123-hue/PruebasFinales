@@ -12,7 +12,11 @@ function isEmail(value) {
   if (!isNonEmptyString(value)) {
     return false;
   }
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  const normalized = value.trim();
+  if (normalized.includes('..')) {
+    return false;
+  }
+  return /^[^\s@.][^\s@]*@[^\s@.][^\s@]*\.[a-z]{2,}$/i.test(normalized);
 }
 
 module.exports = { isNonEmptyString, isPositiveInteger, isEmail };
