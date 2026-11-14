@@ -15,4 +15,8 @@ function isEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
-module.exports = { isNonEmptyString, isPositiveInteger, isEmail };
+function isInRange(value, min, max) {
+  return typeof value === 'number' && value >= min && value <= max;
+}
+
+module.exports = { isNonEmptyString, isPositiveInteger, isEmail, isInRange };

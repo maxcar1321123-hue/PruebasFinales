@@ -9,4 +9,8 @@ function formatCurrency(value, currency = 'EUR') {
   return `${roundTo(value, 2).toFixed(2)} ${currency}`;
 }
 
-module.exports = { roundTo, formatCurrency };
+function formatPercentage(value, decimals = 1) {
+  return `${roundTo(value, decimals).toFixed(decimals)} %`;
+}
+
+module.exports = { roundTo, formatCurrency, formatPercentage };

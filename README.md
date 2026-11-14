@@ -8,9 +8,9 @@ No tiene dependencias externas: solo necesita Node.js 20 o superior.
 
 ```
 src/
-  math/calculator.js        Operaciones aritméticas y descuentos
-  validation/validators.js  Validaciones de cadenas, enteros y emails
-  utils/format.js           Redondeo y formato de moneda
+  math/calculator.js        Operaciones aritméticas, descuentos y porcentajes
+  validation/validators.js  Validaciones de cadenas, enteros, rangos y emails
+  utils/format.js           Redondeo y formato de moneda y porcentajes
   auth/permissions.js       Modelo de permisos ficticio (ruta crítica de ejemplo)
   index.js                  Punto de entrada
 test/                       Pruebas unitarias con node:test

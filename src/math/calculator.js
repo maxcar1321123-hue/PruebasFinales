@@ -31,4 +31,8 @@ function applyDiscount(price, percent) {
   return price - (price * percent) / 100;
 }
 
-module.exports = { add, subtract, multiply, divide, average, applyDiscount };
+function percentage(part, total) {
+  return divide(part * 100, total);
+}
+
+module.exports = { add, subtract, multiply, divide, average, applyDiscount, percentage };
